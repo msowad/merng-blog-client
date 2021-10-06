@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  overflow: -moz-scrollbars-vertical;
+  overflow-y: scroll;
+}
+
+.btn {
+  @apply transition focus:outline-none focus:ring-2 inline-flex items-center uppercase text-sm shadow-sm border border-transparent focus:ring-offset-2;
+}
+.danger {
+  @apply bg-red-600 text-white hover:bg-red-700 focus:ring-red-500;
+}
+.btn:not(.icon) {
+  @apply rounded px-3;
+}
+.btn.icon {
+  @apply rounded-full;
+}
+.primary.outline {
+  @apply hover:bg-indigo-200 focus:ring-indigo-600 focus:bg-indigo-200 font-semibold;
+}
+.primary.filled {
+  @apply tracking-wide text-white bg-indigo-600 hover:bg-indigo-700 focus:ring-offset-2 focus:ring-indigo-500;
+}
+
+.input {
+  @apply font-medium tracking-wide border focus:ring-1 block w-full py-2 px-3 border-gray-300 bg-white rounded shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 transition placeholder-gray-500;
+}

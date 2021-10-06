@@ -9,10 +9,9 @@ import { useMutation } from '@apollo/client';
 import { AuthContext } from '../../context/auth';
 import { LOGIN_USER } from '../../graphql/auth';
 
-// TODO: remove on deployment
 const initialFormData = {
-  email: 'graph@email.com',
-  password: 'graphgraph',
+  email: '',
+  password: '',
 };
 
 const Login = ({ history }) => {

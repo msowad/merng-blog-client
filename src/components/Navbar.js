@@ -1,19 +1,12 @@
 /* This example requires Tailwind CSS v2.0+ */
 import { Fragment, useContext } from 'react';
 import { Disclosure, Menu, Transition } from '@headlessui/react';
-import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline';
+import { MenuIcon, XIcon } from '@heroicons/react/outline';
 import { NavLink } from 'react-router-dom';
 import { AuthContext } from '../context/auth';
 
-const navigation = [
-  { name: 'Dashboard', href: '/' },
-  { name: 'Team', href: '/team' },
-  { name: 'Projects', href: '/projects' },
-];
-const userNavigation = [
-  { name: 'Your Profile', href: '/profile' },
-  { name: 'Settings', href: '/setting' },
-];
+const navigation = [{ name: 'Home', href: '/' }];
+const userNavigation = [];
 const authNavigation = [
   { name: 'Login', href: '/login' },
   { name: 'Register', href: '/register' },
@@ -66,14 +59,6 @@ const Navbar = () => {
               <div className='hidden md:block'>
                 {user ? (
                   <div className='ml-4 flex items-center md:ml-6'>
-                    <button
-                      type='button'
-                      className='bg-gray-800 p-1 rounded-full text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white'
-                    >
-                      <span className='sr-only'>View notifications</span>
-                      <BellIcon className='h-6 w-6' aria-hidden='true' />
-                    </button>
-
                     {/* Profile dropdown */}
                     <Menu as='div' className='ml-3 relative'>
                       <div>
@@ -81,7 +66,7 @@ const Navbar = () => {
                           <span className='sr-only'>Open user menu</span>
                           <img
                             className='h-8 w-8 rounded-full'
-                            src={user.imageUrl}
+                            src='https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60'
                             alt=''
                           />
                         </Menu.Button>
@@ -179,7 +164,7 @@ const Navbar = () => {
                     <div className='flex-shrink-0'>
                       <img
                         className='h-10 w-10 rounded-full'
-                        src={user.imageUrl}
+                        src='https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60'
                         alt='Avatar'
                       />
                     </div>
@@ -191,13 +176,6 @@ const Navbar = () => {
                         {user.email}
                       </div>
                     </div>
-                    <button
-                      type='button'
-                      className='ml-auto bg-gray-800 flex-shrink-0 p-1 rounded-full text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white'
-                    >
-                      <span className='sr-only'>View notifications</span>
-                      <BellIcon className='h-6 w-6' aria-hidden='true' />
-                    </button>
                   </div>
                   <div className='mt-3 px-2 space-y-1'>
                     {userNavigation.map(item => (

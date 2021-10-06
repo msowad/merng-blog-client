@@ -1,4 +1,4 @@
-<a href="https://mern-graphql-blog.netlify.app/" target="_blank"><img width="100%" src="https://i.ibb.co/jL7TZ1c/cryptoverse-react-app-screenshot.png" alt="screenshot" border="0"></a>
+<a href="https://mern-graphql-blog.netlify.app/" target="_blank"><img width="100%" src="https://i.ibb.co/vcTV43B/mern-graphql-blog-screenshot.png" alt="screenshot" border="0"></a>
 
 ### <a href="https://mern-graphql-blog.netlify.app/" target="_blank">Live site</a>
 
